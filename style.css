@@ -1,0 +1,58 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.2;
+  padding: 15px;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 5px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+fieldset {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+legend {
+  font-weight: bold;
+  padding: 0 5px;
+}
+.input-grid {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+label {
+  font-weight: normal;
+}
+input {
+  width: calc(100% - 15px);
+  padding: 5px;
+}
+button {
+  padding: 5px 20px;
+  cursor: pointer;
+  width: 60%;
+  margin-left: 20%;
+  font-size: 1.1em;
+}
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+.note {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #666;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}

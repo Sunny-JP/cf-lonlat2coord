@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>断層座標計算（始点指定版）</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>経緯度/座標Converter</h1>
+
+      <fieldset>
+        <legend>1. マップ全体基準点</legend>
+        <div class="input-grid">
+          <label for="lat_origin">緯度 (°):</label>
+          <input type="number" id="lat_origin" value="35.0" step="any" />
+          <label for="lon_origin">経度 (°):</label>
+          <input type="number" id="lon_origin" value="133.0" step="any" />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. 断層情報</legend>
+        <div class="input-grid">
+          <label for="lat_start_fault"><strong>始点</strong>緯度 (°):</label>
+          <input type="number" id="lat_start_fault" value="35.1" step="any" />
+          <label for="lon_start_fault"><strong>始点</strong>経度 (°):</label>
+          <input type="number" id="lon_start_fault" value="133.2" step="any" />
+          <label for="strike">走向 (°):</label>
+          <input type="number" id="strike" value="30" step="any" />
+          <label for="length">長さ (km):</label>
+          <input type="number" id="length" value="20" step="any" />
+        </div>
+      </fieldset>
+
+      <button onclick="calculate()">計算</button>
+
+      <div id="result"></div>
+
+      <div class="note">
+        <p><strong>計算方法:</strong></p>
+        <p>
+          入力された「基準点」を座標の原点(0,0)とします．<br />
+          入力された「断層の始点」から「走向」の方向に「長さ」分だけ伸びた断層の，始点と終点の相対座標を計算します．
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
